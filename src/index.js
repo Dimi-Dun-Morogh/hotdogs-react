@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import store from './redux/store';
 import { setHotdogs } from './redux/hotdogs/hotdogs.actions';
 
-store.dispatch(setHotdogs);
+// store.dispatch(setHotdogs);
 
 ReactDOM.render(
   <Provider store={store}>

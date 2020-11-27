@@ -1,7 +1,7 @@
 import { hotdogActionTypes } from './hotdogs.types';
 
 const INITIAL_STATE = {
-  AllHotdogs: [1, 2, 3],
+  AllHotdogs: [],
 };
 
 const hotdogsReducer = (state = INITIAL_STATE, action) => {

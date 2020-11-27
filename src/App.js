@@ -8,7 +8,7 @@ import { setHotdogs } from './redux/hotdogs/hotdogs.actions';
 
 class App extends React.Component {
   componentDidMount() {
-    console.log(this.props);
+    this.props.fetchHotDogs();
   }
 
   render() {
@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 }
 const mapDispatchToProps = (dispatch) => ({
-  // fetchHotDogs: dispatch(setHotdogs()),
+  fetchHotDogs: () => dispatch(setHotdogs),
 });
 
 export default connect(null, mapDispatchToProps)(App);

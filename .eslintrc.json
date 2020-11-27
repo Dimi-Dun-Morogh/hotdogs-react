@@ -28,6 +28,8 @@
     "no-unused-vars":"warn",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "no-shadow":"off",
+    "no-return-assign":"off",
+    "no-param-reassign":"off",
     "max-len": [
       "warn",
       {

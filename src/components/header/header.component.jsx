@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from '../custom-button/custom-button.component';
 import './header.styles.css';
 
 const Header = () => (
@@ -7,7 +8,9 @@ const Header = () => (
       <img src="https://ocj.com/wp-content/uploads/2016/12/hotdogBig.png" alt="hotdog" />
       <span>crud</span>
     </div>
-    <span>add hotdog</span>
+    <span>
+      <CustomButton>add hotdog</CustomButton>
+    </span>
   </header>
 );
 

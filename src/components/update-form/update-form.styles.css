@@ -1,0 +1,15 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+input, textarea {
+  padding:5px;
+  border-color: #8080804d;
+  border-style: solid;
+}
+input:focus, textarea:focus {
+  border-color: #8080804d;
+  border-style: solid;
+  outline: none;
+}
