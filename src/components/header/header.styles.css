@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #191c1924;
+  border-left: none;
+  border-right: none;
+  padding:5px;
+}
+header img {
+  width: 50px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  background-color: black;
+display: inline-block;
+color: #fff;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+padding: 3px 7px;
+font-size: 12px;
+letter-spacing: 0.074em;
+border-radius: 10%;
+}

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { connect } from 'react-redux';
+import Header from './components/header/header.component';
 import './App.css';
+import Hotdogs from './components/hotdogs/hotdogs.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { setHotdogs } from './redux/hotdogs/hotdogs.actions';
+
+class App extends React.Component {
+  componentDidMount() {
+    console.log(this.props);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Hotdogs />
+      </div>
+    );
+  }
 }
+const mapDispatchToProps = (dispatch) => ({
+  // fetchHotDogs: dispatch(setHotdogs()),
+});
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

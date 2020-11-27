@@ -1,0 +1,9 @@
+.hotdogs-wrapper {
+  padding: 0 35px;
+}
+.hotdogs-header {
+  border-bottom: 3px solid #191c1924;
+}
+.hotdogs-header h3 {
+  margin-bottom: 6px;
+}
