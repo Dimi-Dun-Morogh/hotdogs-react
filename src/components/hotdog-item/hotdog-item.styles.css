@@ -16,3 +16,8 @@
   font-size: 130%;
   display: block;
 }
+.description-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

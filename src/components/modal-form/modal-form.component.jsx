@@ -32,7 +32,7 @@ const ModalForm = ({ handleSubmit, reset, pristine, submitting, valid, handleMod
 };
 
 export default reduxForm({
-  form: ModalForm,
+  form: 'ModalForm',
   validate: formValidatorHelper,
   destroyOnUnmount: false,
 })(ModalForm);

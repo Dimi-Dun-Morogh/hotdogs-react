@@ -1,75 +1,40 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { reduxForm, Field } from 'redux-form';
+import { input } from '../formInput/formInput.component';
+import { formValidatorHelper } from '../../helpers/formValidate';
 import CustomButton from '../custom-button/custom-button.component';
+
 import './update-form.styles.css';
 
-import { updateHotDog, deleteHotDog } from '../../redux/hotdogs/hotdogs.actions';
+const UpdateForm = ({ handleSubmit, reset, pristine, submitting, valid, cancelEdit, onDelete }) => {
+  return (
+    <form className="form-update" onSubmit={handleSubmit}>
+      <Field name="name" type="text" id="name" placeholder="name" component={input} />
+      <Field name="title" type="text" id="title" component={input} placeholder="title" />
+      <Field name="image" type="text" id="image" component={input} placeholder="image-link" />
+      <Field
+        name="description"
+        type="text"
+        id="description"
+        component="textarea"
+        placeholder="description"
+      />
+      <CustomButton form type="submit" onClick={(values) => handleSubmit(values)}>
+        Update
+      </CustomButton>
+      <CustomButton form type="button" onClick={() => onDelete()}>
+        Delete
+      </CustomButton>
+      <CustomButton form type="button" onClick={() => cancelEdit()}>
+        Cancel
+      </CustomButton>
+    </form>
+  );
+};
 
-class UpdateForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      title: '',
-      image: '',
-      description: '',
-      id: '',
-    };
-  }
-
-  componentDidMount() {
-    this.setState(this.props.item);
-  }
-
-  handleChange = (e) => {
-    const { value, name } = e.target;
-    this.setState({ [name]: value });
-  };
-
-  handleUpdate = () => {
-    this.props.updateHotdog(this.state);
-    this.props.cancelEdit(false);
-  };
-
-  handleDelete = () => {
-    this.props.deleteHotDog(this.state.id);
-    this.props.cancelEdit(false);
-  };
-
-  render() {
-    return (
-      <div className="form-wrapper">
-        <input
-          type="text"
-          name="name"
-          value={this.state.name}
-          onChange={(e) => this.handleChange(e)}
-        />
-        <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
-        <input type="text" name="image" value={this.state.image} onChange={this.handleChange} />
-        <textarea
-          name="description"
-          value={this.state.description}
-          rows="5"
-          onChange={this.handleChange}
-        />
-        <CustomButton form onClick={() => this.handleUpdate()}>
-          Update
-        </CustomButton>
-        <CustomButton form onClick={() => this.handleDelete()}>
-          Delete
-        </CustomButton>
-        <CustomButton form onClick={() => this.props.cancelEdit(false)}>
-          Cancel
-        </CustomButton>
-      </div>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => ({
-  updateHotdog: (id) => dispatch(updateHotDog(id)),
-  deleteHotDog: (id) => dispatch(deleteHotDog(id)),
-});
-
-export default connect(null, mapDispatchToProps)(UpdateForm);
+export default reduxForm({
+  form: 'UpdateForm',
+  validate: formValidatorHelper,
+  enableReinitialize: true,
+  destroyOnUnmount: false,
+})(UpdateForm);

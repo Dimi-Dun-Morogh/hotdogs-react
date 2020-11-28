@@ -13,3 +13,7 @@ input:focus, textarea:focus {
   border-style: solid;
   outline: none;
 }
+.form-update input, .form-update textarea   {
+  width: 100%;
+box-sizing: border-box;
+}
