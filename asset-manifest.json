@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hotdogs-react/static/css/main.b7ce1666.chunk.css",
-    "main.js": "/hotdogs-react/static/js/main.4527ac0e.chunk.js",
-    "main.js.map": "/hotdogs-react/static/js/main.4527ac0e.chunk.js.map",
+    "main.js": "/hotdogs-react/static/js/main.cceef5a9.chunk.js",
+    "main.js.map": "/hotdogs-react/static/js/main.cceef5a9.chunk.js.map",
     "runtime-main.js": "/hotdogs-react/static/js/runtime-main.6b50ba93.js",
     "runtime-main.js.map": "/hotdogs-react/static/js/runtime-main.6b50ba93.js.map",
     "static/js/2.b7dd82da.chunk.js": "/hotdogs-react/static/js/2.b7dd82da.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6b50ba93.js",
     "static/js/2.b7dd82da.chunk.js",
     "static/css/main.b7ce1666.chunk.css",
-    "static/js/main.4527ac0e.chunk.js"
+    "static/js/main.cceef5a9.chunk.js"
   ]
 }
