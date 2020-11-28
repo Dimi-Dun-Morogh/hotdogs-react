@@ -3,12 +3,17 @@
   font-weight: bold;
   cursor: pointer;
   width: 100%;
+  border-style: solid;
 }
-.custom-button:hover {
+.custom-button:hover, .inverted {
   background-color: #000;
   color: #fff;
-  border-color: #000;
+  border-color: #fff;
 }
 .form {
   margin-top: 5px;
+}
+.inverted:hover {
+  background-color: #fff;
+  color: #000;
 }

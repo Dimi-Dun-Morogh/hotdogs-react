@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/store';
-import { setHotdogs } from './redux/hotdogs/hotdogs.actions';
 
 // store.dispatch(setHotdogs);
 

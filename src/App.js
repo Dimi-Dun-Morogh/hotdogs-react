@@ -5,6 +5,7 @@ import './App.css';
 import Hotdogs from './components/hotdogs/hotdogs.component';
 
 import { setHotdogs } from './redux/hotdogs/hotdogs.actions';
+import Modal from './components/modal/modal.component';
 
 class App extends React.Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <Modal />
         <Hotdogs />
       </div>
     );
