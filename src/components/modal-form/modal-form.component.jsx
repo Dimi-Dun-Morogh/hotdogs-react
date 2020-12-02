@@ -18,7 +18,8 @@ const ModalForm = ({ handleSubmit, reset, pristine, submitting, valid, handleMod
           name="description"
           type="text"
           id="description"
-          component="textarea"
+          component={input}
+          textareatrue
           placeholder="description"
         />
         <div className="buttons-modal">
