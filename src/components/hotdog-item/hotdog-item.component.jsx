@@ -29,7 +29,8 @@ class HotdogItem extends React.Component {
   };
 
   handleDelete = () => {
-    this.props.deleteHotdog(this.props.item.id);
+    console.log(this.props);
+    this.props.deletehotDog(this.props.item.id);
   };
 
   render() {
@@ -62,7 +63,7 @@ class HotdogItem extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
   updateHotdog: (id) => dispatch(updateHotDog(id)),
-  deleteHotDog: (id) => dispatch(deleteHotDog(id)),
+  deletehotDog: (id) => dispatch(deleteHotDog(id)),
 });
 
 export default connect(null, mapDispatchToProps)(HotdogItem);

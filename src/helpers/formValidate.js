@@ -23,10 +23,10 @@ export const formValidatorHelper = (values, props) => {
   } else if (values.title.length < 3) {
     errors.title = 'title should be > 3';
   }
-  if (!values.image) {
-    errors.image = 'image link is required';
-  } else if (values.image.length < 3) {
-    errors.image = 'image link should be > 3';
+  if (!values.description) {
+    errors.description = 'description link is required';
+  } else if (values.description.length < 3) {
+    errors.description = 'description link should be > 3';
   }
 
   return errors;
