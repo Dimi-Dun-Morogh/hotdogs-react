@@ -16,7 +16,8 @@ const UpdateForm = ({ handleSubmit, reset, pristine, submitting, valid, cancelEd
         name="description"
         type="text"
         id="description"
-        component="textarea"
+        component={input}
+        textareatrue
         placeholder="description"
       />
       <CustomButton form type="submit" onClick={(values) => handleSubmit(values)}>

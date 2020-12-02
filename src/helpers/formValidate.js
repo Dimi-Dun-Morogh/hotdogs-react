@@ -24,9 +24,9 @@ export const formValidatorHelper = (values, props) => {
     errors.title = 'title should be > 3';
   }
   if (!values.description) {
-    errors.description = 'description link is required';
+    errors.description = 'description  is required';
   } else if (values.description.length < 3) {
-    errors.description = 'description link should be > 3';
+    errors.description = 'description  should be > 3';
   }
 
   return errors;
